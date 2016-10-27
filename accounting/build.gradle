@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	//compile project(':common')
+	compile group: 'org.glassfish.jersey', name: 'jersey-bom', version: '2.23.2'
+	compile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.23.2'
+	compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.23.2'
+	compile group: 'com.thetransactioncompany', name: 'cors-filter', version: '2.5'
+}
